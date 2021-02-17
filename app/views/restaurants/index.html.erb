@@ -1,9 +1,11 @@
-<h1>This is all the restaurants</h1>
+<h1 class="text-center">This is all the restaurants</h1>
 
-<ul>
-<% @restaurants.each do |restaurant| %>
-  <li>  <%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-<% end %>
-</ul>
+<div class="d-flex justify-content-center">
+  <ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>  <%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+  </ul>
+</div>
 
-<i class="fas fa-plus"></i> <%= link_to 'Add a restaurant', new_restaurant_path %>
+<i class="fas fa-plus"></i> <%= link_to 'Add a restaurant', new_restaurant_path, class: "btn btn-primary"  %>
